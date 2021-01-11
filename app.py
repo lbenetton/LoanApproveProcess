@@ -14,6 +14,10 @@ def load_model():
 def home():
     return render_template('index.html')
 
+@app.route('/notebook')
+def notebook():
+    return render_template('notebook.html')
+
 @app.route('/predict', methods=['POST', 'GET'])
 def predict():
     if request.method == 'POST':
