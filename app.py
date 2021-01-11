@@ -80,7 +80,6 @@ def predict():
         elif selfemployed == 'yes':
             x[15],x[16] = 1, 0
 
-        
         propertyarea = proparea
         if propertyarea == 'rural':
             x[17],x[18],x[19] = 1, 0, 0
