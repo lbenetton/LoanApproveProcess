@@ -1,0 +1,181 @@
+{% extends "base.html" %}
+{% block title %}Predict Page{% endblock %}
+
+{% block content %}
+<form class="row g-3 align-items-center" action="#" method="POST">
+    <!-- <p>Name:</p>
+    <p><input type="text" name="nm"/></p>
+    <p><input type="submit" value="submit"/></p> -->
+    <div class="container">
+        <div class="row bg-light p-3 border align-items-center justify-content-start">
+            <div class="col-2">
+                <label for="inputGender" class="fs-6 fw-bold form-label">Gender:</label>
+            </div>
+            <div class="col-1 form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioGender" id="inlineRadioGender1" value="male" required>
+                <label class="form-check-label" for="inlineRadioGender1">Male</label>
+            </div>
+            <div class="col-1 form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioGender" id="inlineRadioGender2" value="female">
+                <label class="form-check-label" for="inlineRadioGender2">Female</label>
+            </div>
+            <div class="col-1 form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioGender" id="inlineRadioGender3" value="other">
+                <label class="form-check-label" for="inlineRadioGender3">Other</label>
+            </div> 
+            
+        </div>
+        
+        <div class="row bg-light p-3 border align-items-center justify-content-start">
+            <div class="col-2">
+                <label for="inputMarried" class="fs-6 fw-bold form-label">Married Status:</label>
+            </div>
+            <div class="col-1 form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioMarried" id="inlineRadioMarried1" value="married" required>
+                <label class="form-check-label" for="inlineRadioMarried1">Married</label>
+            </div>
+            <div class="col-1 form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioMarried" id="inlineRadioMarried2" value="notmarried">
+                <label class="form-check-label" for="inlineRadioMarried2">Not Married</label>
+            </div>
+            <div class="col-1 form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioMarried" id="inlineRadioMarried3" value="other">
+                <label class="form-check-label" for="inlineRadioMarried3">Other</label>
+            </div>
+            
+        </div>
+
+        <div class="row bg-light p-3 border align-items-center justify-content-start">
+            <div class="col-2">
+                <label for="inputDependents" class="fs-6 fw-bold form-label">Dependents:</label>
+            </div>
+            <div class="col-1 form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioDependents" id="inlineRadioDependents1" value="0" required>
+                <label class="form-check-label" for="inlineRadioDependents1">0</label>
+            </div>
+            <div class="col-1 form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioDependents" id="inlineRadioDependents2" value="1">
+                <label class="form-check-label" for="inlineRadioDependents2">1</label>
+            </div>
+            <div class="col-1 form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioDependents" id="inlineRadioDependents3" value="2">
+                <label class="form-check-label" for="inlineRadioDependents3">2</label>
+            </div>
+            <div class="col-1 form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioDependents" id="inlineRadioDependents4" value="3+">
+                <label class="form-check-label" for="inlineRadioDependents4">3+</label>
+            </div>
+        </div>
+
+        <div class="row bg-light p-3 border align-items-center justify-content-start">
+            <div class="col-2">
+                <label for="inputEducation" class="fs-6 fw-bold form-label">Education:</label>
+            </div>
+            <div class="col-1 form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioEducation" id="inlineRadioEducation1" value="graduated" required>
+                <label class="form-check-label" for="inlineRadioEducation1">Graduated</label>
+            </div>
+            <div class="col-1 form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioEducation" id="inlineRadioEducation2" value="notgraduated">
+                <label class="form-check-label" for="inlineRadioEducation2">Not Graduated</label>
+            </div>
+        </div>
+
+        <div class="row bg-light p-3 border align-items-center justify-content-start">
+            <div class="col-2">
+                <label for="inputSelfEmp" class="fs-6 fw-bold form-label">Self Employed:</label>
+            </div>
+            <div class="col-1 form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioSelfEmp" id="inlineRadioSelfEmp1" value="yes" required>
+                <label class="form-check-label" for="inlineRadioSelfEmp1">Yes</label>
+            </div>
+            <div class="col-1 form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioSelfEmp" id="inlineRadioSelfEmp2" value="no">
+                <label class="form-check-label" for="inlineRadioSelfEmp2">No</label>
+            </div>
+        </div>
+
+        <div class="row bg-light p-3 border align-items-center justify-content-start">
+            <div class="col-2">
+                <label for="inputCredit" class="fs-6 fw-bold form-label">Credit History:</label>
+            </div>
+            <div class="col-1 form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioCredit" id="inlineRadioCredit1" value="yes" required>
+                <label class="form-check-label" for="inlineRadioCredit1">Yes</label>
+            </div>
+            <div class="col-1 form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioCredit" id="inlineRadioCredit2" value="no">
+                <label class="form-check-label" for="inlineRadioCredit2">No</label>
+            </div>
+        </div>
+
+        <div class="row bg-light p-3 border align-items-center justify-content-start">
+            <div class="col-2">
+                <label for="inputPropArea" class="fs-6 fw-bold form-label">Property Area:</label>
+            </div>
+            <div class="col-1 form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioPropArea" id="inlineRadioPropArea1" value="urban" required>
+                <label class="form-check-label" for="inlineRadioPropArea1">Urban</label>
+            </div>
+            <div class="col-1 form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioPropArea" id="inlineRadioPropArea2" value="semiurban">
+                <label class="form-check-label" for="inlineRadioPropArea2">Semiurban</label>
+            </div>
+            <div class="col-1 form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioPropArea" id="inlineRadioPropArea3" value="rural">
+                <label class="form-check-label" for="inlineRadioPropArea3">Rural</label>
+            </div>
+        </div>
+
+        <div class="row bg-light p-3 border align-items-center justify-content-start">
+            <div class="col-2">
+                <label for="inputApplicationIncome" class="fs-6 fw-bold form-label">Application Income:</label>
+            </div>
+            <div class="col-2">
+                <input type="number" min="0.00" max="100000.00" step="0.01" class="form-control" id="inputApplicationIncome" placeholder="Application Income" name="textAppIncome" required>        
+            </div>
+        </div>
+
+        <div class="row bg-light p-3 border align-items-center justify-content-start">
+            <div class="col-2">
+                <label for="inputCoApplicationIncome" class="fs-6 fw-bold form-label">Co Application Income:</label>
+            </div>
+            <div class="col-2">
+                <input type="number" min="0.00" max="100000.00" step="0.01" class="form-control" id="inputCoApplicationIncome" placeholder="Co Application Income" name="textCoAppIncome" required>        
+            </div>
+        </div>
+
+        <div class="row bg-light p-3 border align-items-center justify-content-start">
+            <div class="col-2">
+                <label for="inputLoanAmt" class="fs-6 fw-bold form-label">Loan Amount:</label>
+            </div>
+            <div class="col-2">
+                <input type="number" min="0.00" max="100000.00" step="0.01" class="form-control" id="inputLoanAmt" placeholder="Loan Amount" name="textLoanAmt" required>        
+            </div>
+        </div>
+
+        <div class="row bg-light p-3 border align-items-center justify-content-start">
+            <div class="col-2">
+                <label for="inputLoanTerms" class="fs-6 fw-bold form-label">Loan Amount Terms:</label>
+            </div>
+            <div class="col-2">
+                <input type="number" min="1" max="360" step="1" class="form-control" id="inputLoanTerms" placeholder="Loan Amount Terms" name="textLoanTerms" required>        
+            </div>
+        </div>
+
+        <div class="row bg-light p-3 border align-items-start justify-content-start">
+            <div class="col-2">
+                <button type="submit" class="btn btn-primary mb-3" value="submit">Evaluate Loan Application</button>      
+            </div>
+            <div class="col-5">
+                <h1 class="fs-1 fw-bold text-primary">{{ output }}</h1>
+            </div>
+ -->
+        </div>    
+
+        
+
+    </div>
+</form>
+    
+{% endblock %}

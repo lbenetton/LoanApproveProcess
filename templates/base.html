@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <!-- Required meta tags always come first -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+        <!-- Bootstrap CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+        <!-- <link rel="stylesheet" href="styles.css"> -->
+        <title>{% block title %}{% endblock %}</title>
+    </head>
+    <body>
+        <header class="row g-3 align-items-center">
+            <div class='container'>
+                <div class="row row-header">
+                    <div class="col-12">
+                        <h1 class="fs-1 fw-bold text-primary">Loan Request Evaluation Process</h1>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- <div class="container">
+            <div class="row row-content align-items-center">
+                <ol class="col-12 breadcrumb">
+                    <li class="breadcrumb-item"><a href="./index.html">Home</a></li>
+                    <li class="breadcrumb-item active"><a href="#">About Us</a></li>
+                </ol>
+            </div>
+        </div> -->
+        {% block content %} 
+        {% endblock %}
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+    </body>
+</html>
